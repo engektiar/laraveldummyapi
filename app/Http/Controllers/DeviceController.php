@@ -7,7 +7,22 @@ use App\Models\Device;
 
 class DeviceController extends Controller
 {
-    function  list($id=null){
-       return $id ?Device::find($id):Device::all();    
+
+
+    // only view the data
+
+    function  onlyviewdata(){
+        return Device::all();
     }
+
+    // viwe the data with id
+        function  list($id=null){
+       return $id ?Device::find($id):Device::all();    
+    } 
+
+
+// viwe the data with id only
+    function listparams($id=null){
+        return Device::find($id);    
+     }
 }

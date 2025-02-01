@@ -24,6 +24,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/data', [DummyControler::class, 'getdate']);
 
+Route::get('/onlyviewdata', [DeviceController::class, 'onlyviewdata']);
 
 Route::get('/list/{id?}', [DeviceController::class, 'list']);
+
+Route::get('/listparams/{id?}', [DeviceController::class, 'listparams']);
 
