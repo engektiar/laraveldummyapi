@@ -7,7 +7,7 @@ use App\Models\Device;
 
 class DeviceController extends Controller
 {
-    function  list($id){
-       return Device::find($id);
+    function  list($id=null){
+       return $id ?Device::find($id):Device::all();    
     }
 }
